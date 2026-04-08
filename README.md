@@ -1,14 +1,12 @@
-# 🖥️ Microprocessors & Microcontrollers — Assembly Programs
+#  Microprocessors & Microcontrollers — Assembly Programs
 
 A comprehensive collection of **8086 Microprocessor**, **8051 Microcontroller**, **8253 Timer**, **8255 PPI**, and **MASM** assembly-language programs written as part of the *Microprocessors and Microcontrollers* lab course.
 
 ---
 
-## 📋 Description
+## Description
 
 This repository contains well-organized assembly programs covering fundamental to intermediate concepts in microprocessor and microcontroller programming. Topics include arithmetic operations, array manipulation, string processing, interfacing with peripheral chips (ADC, DAC, timers, PPI), stepper motor control, and general MASM programming.
-
-All programs are written in Intel x86/8051 assembly and can be assembled and run using standard tools such as **MASM**, **TASM**, **EMU8086**, or hardware kits.
 
 ---
 
@@ -44,9 +42,9 @@ MICROPROCESSORS-MICROCONTROLLERS/
 
 ---
 
-## 📁 Folder Details & File Links
+## Folder Details & File Links
 
-### 🔷 8086 — Intel 8086 Microprocessor
+### 8086 — Intel 8086 Microprocessor
 
 Programs written for the 16-bit Intel 8086 microprocessor covering a wide range of lab experiments.
 
@@ -95,7 +93,7 @@ Programs written for the 16-bit Intel 8086 microprocessor covering a wide range 
 
 ---
 
-### 🔶 8051 — Intel 8051 Microcontroller
+### 8051 — Intel 8051 Microcontroller
 
 Programs for the 8-bit Intel 8051 microcontroller, focusing on basic arithmetic and data manipulation.
 
@@ -112,7 +110,7 @@ Programs for the 8-bit Intel 8051 microcontroller, focusing on basic arithmetic 
 
 ---
 
-### 🕐 8253 — Programmable Interval Timer
+### 8253 — Programmable Interval Timer
 
 Programs to configure and use the Intel 8253 timer chip in various modes.
 
@@ -125,7 +123,7 @@ Programs to configure and use the Intel 8253 timer chip in various modes.
 
 ---
 
-### 🔌 8255 — Programmable Peripheral Interface
+### 8255 — Programmable Peripheral Interface
 
 Programs for interfacing with the Intel 8255 PPI chip.
 
@@ -136,7 +134,7 @@ Programs for interfacing with the Intel 8255 PPI chip.
 
 ---
 
-### 🛠️ MASM — General MASM Programs
+### MASM — General MASM Programs
 
 Standalone assembly programs written using the Microsoft Macro Assembler (MASM).
 
@@ -149,22 +147,13 @@ Standalone assembly programs written using the Microsoft Macro Assembler (MASM).
 
 ---
 
-## 🛠️ Tools & Prerequisites
-
-- **Assembler:** MASM / TASM / EMU8086
-- **Simulator:** EMU8086, Proteus, or real hardware kit
-- **OS:** MS-DOS / DOSBox (for 8086 programs)
-- **Microcontroller Kit:** 8051 trainer kit (for 8051 programs)
-
----
-
-## 👨‍💻 Author
+## Author
 
 ### Hariharasudhan A
 
-I am a passionate Computer Science and Engineering student at Mepco Schlenk Engineering College. I have a strong interest in low-level programming, embedded systems, and microprocessor architecture. This repository documents my hands-on learning journey through assembly language programming for various microprocessors and microcontrollers.
+I am a passionate Computer Science and Engineering student at Mepco Schlenk Engineering College.This repository documents my hands-on learning journey through assembly language programming for various microprocessors and microcontrollers.
 
-**Skills:** Assembly Language · Embedded Systems · 8086/8051 Architecture · Digital Electronics · C/C++
+**Skills:** Assembly Language · 8086/8051 Architecture · Digital Electronics · C/C++
 
 📧 **Reach me:** [sudanayyappan_bcs28@mepcoeng.ac.in](mailto:sudanayyappan_bcs28@mepcoeng.ac.in)
 
