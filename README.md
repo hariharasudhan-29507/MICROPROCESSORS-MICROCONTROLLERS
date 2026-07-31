@@ -1,6 +1,24 @@
-#  Microprocessors & Microcontrollers — Assembly Programs
+# Microprocessors & Microcontrollers — Assembly Programs
 
 A comprehensive collection of **8086 Microprocessor**, **8051 Microcontroller**, **8253 Timer**, **8255 PPI**, and **MASM** assembly-language programs written as part of the *Microprocessors and Microcontrollers* lab course.
+
+---
+
+## 📖 Table of Contents
+
+- [Description](#description)
+- [🗂️ Repository Structure](#️-repository-structure)
+- [📚 Microcontroller & Microprocessor Documentation](#-microcontroller--microprocessor-documentation)
+- [Folder Details & File Links](#folder-details--file-links)
+  - [8086 — Intel 8086 Microprocessor](#8086--intel-8086-microprocessor)
+  - [8051 — Intel 8051 Microcontroller](#8051--intel-8051-microcontroller)
+  - [8253 — Programmable Interval Timer](#8253--programmable-interval-timer)
+  - [8255 — Programmable Peripheral Interface](#8255--programmable-peripheral-interface)
+  - [MASM — General MASM Programs](#masm--general-masm-programs)
+- [🛠️ How to Compile & Run](#️-how-to-compile--run)
+  - [For 8086 and MASM Programs](#for-8086-and-masm-programs)
+  - [For 8051 Microcontroller Programs](#for-8051-microcontroller-programs)
+- [Author](#author)
 
 ---
 
@@ -14,6 +32,13 @@ This repository contains well-organized assembly programs covering fundamental t
 
 ```
 MICROPROCESSORS-MICROCONTROLLERS/
+│
+├── docs/                        # Comprehensive documentation for each platform
+│   ├── 8086/                    # 8086 Microprocessor documentation
+│   ├── 8051/                    # 8051 Microcontroller documentation
+│   ├── 8253/                    # 8253 Timer documentation
+│   ├── 8255/                    # 8255 PPI documentation
+│   └── MASM/                    # General MASM documentation & tools
 │
 ├── 8086/                        # Intel 8086 Microprocessor programs
 │   ├── Basic Arithmetic/        # Add, Subtract, Multiply, Divide
@@ -42,11 +67,23 @@ MICROPROCESSORS-MICROCONTROLLERS/
 
 ---
 
+## 📚 Microcontroller & Microprocessor Documentation
+
+For thorough explanations on architectures, pin configurations, instruction sets, register mappings, and detailed line-by-line analyses of the code, please refer to the subdirectories under the `docs/` folder:
+
+* 📄 **[Intel 8086 Microprocessor Docs](docs/8086/README.md)**
+* 📄 **[Intel 8051 Microcontroller Docs](docs/8051/README.md)**
+* 📄 **[Intel 8253 Programmable Interval Timer Docs](docs/8253/README.md)**
+* 📄 **[Intel 8255 Programmable Peripheral Interface Docs](docs/8255/README.md)**
+* 📄 **[General MASM Assembly Docs](docs/MASM/README.md)**
+
+---
+
 ## Folder Details & File Links
 
 ### 8086 — Intel 8086 Microprocessor
 
-Programs written for the 16-bit Intel 8086 microprocessor covering a wide range of lab experiments.
+Programs written for the 16-bit Intel 8086 microprocessor covering a wide range of lab experiments. Detailed documentation is available at [Intel 8086 Microprocessor Docs](docs/8086/README.md).
 
 #### ➤ Basic Arithmetic
 | File | Description |
@@ -95,7 +132,7 @@ Programs written for the 16-bit Intel 8086 microprocessor covering a wide range 
 
 ### 8051 — Intel 8051 Microcontroller
 
-Programs for the 8-bit Intel 8051 microcontroller, focusing on basic arithmetic and data manipulation.
+Programs for the 8-bit Intel 8051 microcontroller, focusing on basic arithmetic and data manipulation. Detailed documentation is available at [Intel 8051 Microcontroller Docs](docs/8051/README.md).
 
 #### ➤ Basic Arithmetic
 | File | Description |
@@ -112,7 +149,7 @@ Programs for the 8-bit Intel 8051 microcontroller, focusing on basic arithmetic 
 
 ### 8253 — Programmable Interval Timer
 
-Programs to configure and use the Intel 8253 timer chip in various modes.
+Programs to configure and use the Intel 8253 timer chip in various modes. Detailed documentation is available at [Intel 8253 Programmable Interval Timer Docs](docs/8253/README.md).
 
 #### ➤ Timer Modes
 | File | Description |
@@ -125,7 +162,7 @@ Programs to configure and use the Intel 8253 timer chip in various modes.
 
 ### 8255 — Programmable Peripheral Interface
 
-Programs for interfacing with the Intel 8255 PPI chip.
+Programs for interfacing with the Intel 8255 PPI chip. Detailed documentation is available at [Intel 8255 Programmable Peripheral Interface Docs](docs/8255/README.md).
 
 | File | Description |
 |------|-------------|
@@ -136,7 +173,7 @@ Programs for interfacing with the Intel 8255 PPI chip.
 
 ### MASM — General MASM Programs
 
-Standalone assembly programs written using the Microsoft Macro Assembler (MASM).
+Standalone assembly programs written using the Microsoft Macro Assembler (MASM). Detailed documentation is available at [General MASM Assembly Docs](docs/MASM/README.md).
 
 | File | Description |
 |------|-------------|
@@ -147,11 +184,76 @@ Standalone assembly programs written using the Microsoft Macro Assembler (MASM).
 
 ---
 
+## 🛠️ How to Compile & Run
+
+### For 8086 and MASM Programs
+
+To run the `.ASM` programs for the 8086 microprocessor or MASM on modern Windows/macOS/Linux operating systems, you will need a DOS emulator such as **DOSBox** along with the **MASM** assembler utilities (`MASM.EXE` and `LINK.EXE`).
+
+1. **Download and Install DOSBox**:
+   Get DOSBox from [dosbox.com](https://www.dosbox.com/).
+2. **Setup the Work Environment**:
+   - Create a directory, e.g., `C:\DOSBox` on your host machine.
+   - Place your `.ASM` files along with `MASM.EXE` and `LINK.EXE` (and optionally `DEBUG.EXE`) inside that directory.
+3. **Mount the Directory inside DOSBox**:
+   Launch DOSBox and type:
+   ```cmd
+   mount c c:\DOSBox
+   c:
+   ```
+4. **Assemble the Program**:
+   ```cmd
+   masm filename.asm;
+   ```
+   *(The semicolon `;` tells MASM to skip the prompts for listing and object filenames and use defaults).*
+5. **Link the Object File**:
+   ```cmd
+   link filename.obj;
+   ```
+6. **Execute the Program**:
+   ```cmd
+   filename.exe
+   ```
+7. **Debug the Program** (To inspect registers or memory):
+   ```cmd
+   debug filename.exe
+   ```
+   Inside debug, you can use commands like:
+   - `t` (trace/step)
+   - `g` (go/run)
+   - `d` (dump memory)
+   - `r` (view registers)
+   - `q` (quit)
+
+### For 8051 Microcontroller Programs
+
+8051 programs can be simulated/compiled using standard IDEs like **Keil µVision** (for 8051 C51 compiler/assembler) or **EdSim51** (a popular, visual 8051 simulator).
+
+#### Using Keil µVision:
+1. **Create a New Project**:
+   Open Keil, select `Project -> New uVision Project...`, name it, and select your 8051 target device (e.g., *Atmel AT89C51*).
+2. **Add Source Code**:
+   - Right-click `Source Group 1` in the project explorer and choose `Add New Item to Group...`.
+   - Choose **Assembly File (.s / .asm)** and type your code.
+3. **Configure Project Settings**:
+   Right-click Target 1, go to `Options for Target`, and under the `Output` tab, check **Create HEX File** if you plan to burn the code onto a physical chip.
+4. **Build and Debug**:
+   - Press `F7` to build (translate and link).
+   - Click the **Start/Stop Debug Session** button (`Ctrl+F5`) to simulate step-by-step, inspecting variables, internal RAM, SFR registers, and ports.
+
+#### Using EdSim51 Simulator:
+1. Open the EdSim51 simulator.
+2. Paste the `.ASM` program code into the editor window.
+3. Click **Assemble**.
+4. Use the **Step** or **Run** buttons to execute instructions and observe internal memory (`RAM`), Special Function Registers (`SFR`), and simulated peripherals (such as LEDs, switches, and DAC).
+
+---
+
 ## Author
 
 ### Hariharasudhan A
 
-I am a passionate Computer Science and Engineering student at Mepco Schlenk Engineering College.This repository documents my hands-on learning journey through assembly language programming for various microprocessors and microcontrollers.
+I am a passionate Computer Science and Engineering student at Mepco Schlenk Engineering College. This repository documents my hands-on learning journey through assembly language programming for various microprocessors and microcontrollers.
 
 **Skills:** Assembly Language · 8086/8051 Architecture · Digital Electronics · C/C++
 
